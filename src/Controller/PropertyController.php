@@ -9,16 +9,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PropertyController extends AbstractController {
 
-
     /**
      * @var AccessBusRepository
      */
 
-    private $repository;
+    private $bus;
 
-    public function __construct(AccessBusRepository $repository)
+    public function __construct(AccessBusRepository $bus)
     {
-        $this->repository = $repository;
+        $this->bus = $bus;
     }
 
     /**
@@ -26,12 +25,12 @@ class PropertyController extends AbstractController {
      * @return Response
      */
 
-
-    public function  index() : Response
+    public function index() : Response
     {
-
-        $proprety = $this->repository->findAll();
-        dump($proprety);
+        $bus = $this->bus->findAll();
+        dump($bus);
         return $this->render('property/index.html.twig');
     }
+
+
 }

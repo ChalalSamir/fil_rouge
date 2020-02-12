@@ -2,10 +2,15 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AccessBusRepository")
+ * @ApiResource(
+ *     collectionOperations={"get"},
+ *     itemOperations={"get"}
+ * )
  */
 class AccessBus
 {
@@ -24,22 +29,7 @@ class AccessBus
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $code_insee;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
     private $departement;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $X;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $Y;
 
     /**
      * @ORM\Column(type="string", length=1, nullable=true)
@@ -47,62 +37,24 @@ class AccessBus
     private $accessibilite_UFR;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $annonce_sonore_prochain_passage;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $annonce_visuelle_prochain_passage;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $annonce_sonore_situations_perturbees;
-
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $annonce_visuelle_situations_perturbees;
-
-    /**
-     * @ORM\Column(type="bigint", nullable=true)
-     */
-    private $code_stif;
-
-    /**
-     * @ORM\Column(type="string", length=30, nullable=true)
-     */
-    private $coordonnees;
-
-    /**
-     * @ORM\Column(type="string", length=1, nullable=true)
-     */
-    private $Sens;
-
-    /**
      * @ORM\Column(type="string", length=3, nullable=true)
      */
     private $Ligne;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $latitude;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $longitude;
 
     public function getId(): ?int
     {
         return $this->id;
     }
-
-    public function getIDPTAR(): ?int
-    {
-        return $this->IDPTAR;
-    }
-
-    public function setIDPTAR(?int $IDPTAR): self
-    {
-        $this->IDPTAR = $IDPTAR;
-
-        return $this;
-    }
-
     public function getNomArret(): ?string
     {
         return $this->Nom_arret;
@@ -114,19 +66,6 @@ class AccessBus
 
         return $this;
     }
-
-    public function getCodeInsee(): ?int
-    {
-        return $this->code_insee;
-    }
-
-    public function setCodeInsee(?int $code_insee): self
-    {
-        $this->code_insee = $code_insee;
-
-        return $this;
-    }
-
     public function getDepartement(): ?int
     {
         return $this->departement;
@@ -138,31 +77,6 @@ class AccessBus
 
         return $this;
     }
-
-    public function getX(): ?int
-    {
-        return $this->X;
-    }
-
-    public function setX(?int $X): self
-    {
-        $this->X = $X;
-
-        return $this;
-    }
-
-    public function getY(): ?int
-    {
-        return $this->Y;
-    }
-
-    public function setY(?int $Y): self
-    {
-        $this->Y = $Y;
-
-        return $this;
-    }
-
     public function getAccessibiliteUFR(): ?string
     {
         return $this->accessibilite_UFR;
@@ -174,91 +88,6 @@ class AccessBus
 
         return $this;
     }
-
-    public function getAnnonceSonoreProchainPassage(): ?int
-    {
-        return $this->annonce_sonore_prochain_passage;
-    }
-
-    public function setAnnonceSonoreProchainPassage(?int $annonce_sonore_prochain_passage): self
-    {
-        $this->annonce_sonore_prochain_passage = $annonce_sonore_prochain_passage;
-
-        return $this;
-    }
-
-    public function getAnnonceVisuelleProchainPassage(): ?int
-    {
-        return $this->annonce_visuelle_prochain_passage;
-    }
-
-    public function setAnnonceVisuelleProchainPassage(?int $annonce_visuelle_prochain_passage): self
-    {
-        $this->annonce_visuelle_prochain_passage = $annonce_visuelle_prochain_passage;
-
-        return $this;
-    }
-
-    public function getAnnonceSonoreSituationsPerturbees(): ?int
-    {
-        return $this->annonce_sonore_situations_perturbees;
-    }
-
-    public function setAnnonceSonoreSituationsPerturbees(?int $annonce_sonore_situations_perturbees): self
-    {
-        $this->annonce_sonore_situations_perturbees = $annonce_sonore_situations_perturbees;
-
-        return $this;
-    }
-
-    public function getAnnonceVisuelleSituationsPerturbees(): ?int
-    {
-        return $this->annonce_visuelle_situations_perturbees;
-    }
-
-    public function setAnnonceVisuelleSituationsPerturbees(?int $annonce_visuelle_situations_perturbees): self
-    {
-        $this->annonce_visuelle_situations_perturbees = $annonce_visuelle_situations_perturbees;
-
-        return $this;
-    }
-
-    public function getCodeStif(): ?string
-    {
-        return $this->code_stif;
-    }
-
-    public function setCodeStif(?string $code_stif): self
-    {
-        $this->code_stif = $code_stif;
-
-        return $this;
-    }
-
-    public function getCoordonnees(): ?string
-    {
-        return $this->coordonnees;
-    }
-
-    public function setCoordonnees(?string $coordonnees): self
-    {
-        $this->coordonnees = $coordonnees;
-
-        return $this;
-    }
-
-    public function getSens(): ?string
-    {
-        return $this->Sens;
-    }
-
-    public function setSens(?string $Sens): self
-    {
-        $this->Sens = $Sens;
-
-        return $this;
-    }
-
     public function getLigne(): ?string
     {
         return $this->Ligne;
@@ -267,6 +96,30 @@ class AccessBus
     public function setLigne(?string $Ligne): self
     {
         $this->Ligne = $Ligne;
+
+        return $this;
+    }
+
+    public function getLatitude(): ?float
+    {
+        return $this->latitude;
+    }
+
+    public function setLatitude(float $latitude): self
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    public function getLongitude(): ?float
+    {
+        return $this->longitude;
+    }
+
+    public function setLongitude(float $longitude): self
+    {
+        $this->longitude = $longitude;
 
         return $this;
     }
