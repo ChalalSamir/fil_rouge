@@ -20,6 +20,7 @@ Dévelopeur back-end: Samir
 
 Développeur front-end: Lucien
 
+Modèle Conceptuel des Données /
 
 ![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/MCD.png)
 
