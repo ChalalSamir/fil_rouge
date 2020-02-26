@@ -46,3 +46,6 @@ La majorité des données de notre base proviennent des bases de données fourni
         UPDATE access_bus SET latitude = SUBSTR(coordonnees, 1, (LOCATE(",", coordonnees) -1));
         UPDATE access_bus SET longitude = SUBSTR(coordonnees, (LOCATE(",", coordonnees) +1));
         ALTER TABLE access_bus DROP coordonnees;
+        
+        
+ 
