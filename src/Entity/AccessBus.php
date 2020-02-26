@@ -24,7 +24,7 @@ class AccessBus
     /**
      * @ORM\Column(type="string", length=63, nullable=true)
      */
-    private $Nom_arret;
+    private $nom;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -51,18 +51,28 @@ class AccessBus
      */
     private $longitude;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $picto;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $picto_type_transport;
+
     public function getId(): ?int
     {
         return $this->id;
     }
-    public function getNomArret(): ?string
+    public function getNom(): ?string
     {
-        return $this->Nom_arret;
+        return $this->nom;
     }
 
-    public function setNomArret(?string $Nom_arret): self
+    public function setNom(?string $Nom_arret): self
     {
-        $this->Nom_arret = $Nom_arret;
+        $this->Nom_arret = $nom;
 
         return $this;
     }
@@ -120,6 +130,30 @@ class AccessBus
     public function setLongitude(float $longitude): self
     {
         $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    public function getPicto(): ?string
+    {
+        return $this->picto;
+    }
+
+    public function setPicto(string $picto): self
+    {
+        $this->picto = $picto;
+
+        return $this;
+    }
+
+    public function getPictoTypeTransport(): ?string
+    {
+        return $this->picto_type_transport;
+    }
+
+    public function setPictoTypeTransport(string $picto_type_transport): self
+    {
+        $this->picto_type_transport = $picto_type_transport;
 
         return $this;
     }

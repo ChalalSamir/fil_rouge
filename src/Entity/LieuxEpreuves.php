@@ -41,6 +41,16 @@ class LieuxEpreuves
      */
     private $nombre_spectateurs;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $picto;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +100,30 @@ class LieuxEpreuves
     public function setNombreSpectateurs(int $nombre_spectateurs): self
     {
         $this->nombre_spectateurs = $nombre_spectateurs;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getPicto(): ?string
+    {
+        return $this->picto;
+    }
+
+    public function setPicto(string $picto): self
+    {
+        $this->picto = $picto;
 
         return $this;
     }

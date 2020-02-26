@@ -29,7 +29,7 @@ class TravauxEnCours
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom_arret;
+    private $nom;
 
     /**
      * @ORM\Column(type="float")
@@ -39,7 +39,17 @@ class TravauxEnCours
     /**
      * @ORM\Column(type="float")
      */
-    private $latitudde;
+    private $latitude;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $picto;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $picto_type_transport;
 
     public function getId(): ?int
     {
@@ -58,14 +68,14 @@ class TravauxEnCours
         return $this;
     }
 
-    public function getNomArret(): ?string
+    public function getNom(): ?string
     {
-        return $this->nom_arret;
+        return $this->nom;
     }
 
-    public function setNomArret(string $nom_arret): self
+    public function setNom(string $nom): self
     {
-        $this->nom_arret = $nom_arret;
+        $this->nom_arret = $nom;
 
         return $this;
     }
@@ -82,14 +92,38 @@ class TravauxEnCours
         return $this;
     }
 
-    public function getLatitudde(): ?float
+    public function getLatitude(): ?float
     {
-        return $this->latitudde;
+        return $this->latitude;
     }
 
-    public function setLatitudde(float $latitudde): self
+    public function setLatitude(float $latitude): self
     {
-        $this->latitudde = $latitudde;
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    public function getPicto(): ?string
+    {
+        return $this->picto;
+    }
+
+    public function setPicto(string $picto): self
+    {
+        $this->picto = $picto;
+
+        return $this;
+    }
+
+    public function getPictoTypeTransport(): ?string
+    {
+        return $this->picto_type_transport;
+    }
+
+    public function setPictoTypeTransport(string $picto_type_transport): self
+    {
+        $this->picto_type_transport = $picto_type_transport;
 
         return $this;
     }
