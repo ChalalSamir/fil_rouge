@@ -21,4 +21,5 @@ Dévelopeur back-end: Samir
 Développeur front-end: Lucien
 
 
-![alt text](https://zupimages.net/up/20/09/th7r.png)
+![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/MCD.png)
+
