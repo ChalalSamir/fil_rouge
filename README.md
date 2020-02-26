@@ -42,10 +42,11 @@ La majorité des données de notre base proviennent des bases de données fourni
     
 - À la base, il n'y avait pas de champs "latitude" et "longitude", les deux valeurs étaient stockés dans un même champs qui se nommait "coordonees". Cette disposition posait problème car le développeur front-end avait besoin de récuperer les deux valeurs séparées pour pouvoir afficher les différentes stations sur la map. Avec l'aide de notre intervenant, j'ai d'abord créés les champs "latitude" et "longitude" , j'ai ensuite affecter à chacun de ces champs un partie du champs "coordonnees" qui correspondait à la latitude et à la longitude. N'ayant plus besoin du champs "coordonnees", je l'ai supprimé. La requête est la suivante : 
 
-        ALTER TABLE access_bus ADD latitude DOUBLE PRECISION NOT NULL, ADD longitude DOUBLE PRECISION NOT NULL';
+        ALTER TABLE access_bus ADD latitude DOUBLE PRECISION NOT NULL, ADD longitude DOUBLE PRECISION NOT NULL;
         UPDATE access_bus SET latitude = SUBSTR(coordonnees, 1, (LOCATE(",", coordonnees) -1));
         UPDATE access_bus SET longitude = SUBSTR(coordonnees, (LOCATE(",", coordonnees) +1));
         ALTER TABLE access_bus DROP coordonnees;
         
         
+
  
