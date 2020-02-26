@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200224101434 extends AbstractMigration
+final class Version20200226125241 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,11 +22,7 @@ final class Version20200224101434 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE travaux_en_cours ADD picto VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE lieux_epreuves ADD picto VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE access_metro ADD picto VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE access_rer ADD picto VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE access_bus ADD picto VARCHAR(255) NOT NULL');
+        $this->addSql('ALTER TABLE lieux_epreuves ADD picture VARCHAR(255) NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -34,6 +30,6 @@ final class Version20200224101434 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE lieux_epreuves DROP picto');
+        $this->addSql('ALTER TABLE lieux_epreuves DROP picture');
     }
 }

@@ -49,7 +49,7 @@ class LieuxEpreuves
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $picto;
+    private $picture;
 
     public function getId(): ?int
     {
@@ -116,14 +116,14 @@ class LieuxEpreuves
         return $this;
     }
 
-    public function getPicto(): ?string
+    public function getPicture(): ?string
     {
-        return $this->picto;
+        return $this->picture;
     }
 
-    public function setPicto(string $picto): self
+    public function setPicture(string $picture): self
     {
-        $this->picto = $picto;
+        $this->picture = $picture;
 
         return $this;
     }
