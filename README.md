@@ -2,15 +2,15 @@
 
 Projet de deuxième année de bachelor web au sein de l'école d'étude supérieur HETIC
 
-# CONSIGNE
+# Consigne
 
 Rendre une Datalyse qui permettrait de rendre la ville de Paris plus "Smart city" à l'occasion des JO 2024
 
-# SUJET
+# Sujet
 
 Donner accès aux personnes en situation d'handicape aux différentes épreuves de l'événement
 
-# ROLES
+# Rôles
 
 Designer: Cassandra, Lucas, Mohamed
 
@@ -62,4 +62,10 @@ Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans
  
 # Symfony & API :
 
-       
+J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API Plateform m'a permis d'avoir un gain de temps considérable pour les fonctionnalités que je souhaitais utiliser. J'ai choisis cet outils pour plusieurs raisons :
+
+- La création automatique d'un CRUD pour toutes les entités que l'on va créer après avoir installé ce framework. Si les entités on été créer avant l'installation de l'API, il suffira juste de rajouter "@ApiResource" dans le fichier "src/Entity/Entity-name.php" et cela va directement ajouter un crud pour l'entité. 
+
+- La documentation Swagger automatique : Api Plateform génère automatiquement la documentation liée à notre Api, ce qui est vraiment pratique.
+
+- La gestion des filtres qui est vraiement simple à prendre en main. Il suffit comme pour l'argument "@ApiResourse", d'ajouter "@ApiFilter()" dans l'entité souhaitée, puis ensuite d'ajouter les champs que l'on souhaite filtré.
