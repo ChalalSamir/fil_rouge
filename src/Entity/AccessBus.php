@@ -27,14 +27,9 @@ class AccessBus
     private $nom;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $departement;
-
-    /**
      * @ORM\Column(type="string", length=1, nullable=true)
      */
-    private $accessibilite_UFR;
+    private $ufr;
 
     /**
      * @ORM\Column(type="string", length=3, nullable=true)
@@ -61,6 +56,11 @@ class AccessBus
      */
     private $picto_type_transport;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $departement;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,31 +70,20 @@ class AccessBus
         return $this->nom;
     }
 
-    public function setNom(?string $Nom_arret): self
+    public function setNom(?string $nom): self
     {
-        $this->Nom_arret = $nom;
+        $this->nom = $nom;
 
         return $this;
     }
-    public function getDepartement(): ?int
+    public function getUfr(): ?string
     {
-        return $this->departement;
+        return $this->ufr;
     }
 
-    public function setDepartement(?int $departement): self
+    public function setUfr(?string $ufr): self
     {
-        $this->departement = $departement;
-
-        return $this;
-    }
-    public function getAccessibiliteUFR(): ?string
-    {
-        return $this->accessibilite_UFR;
-    }
-
-    public function setAccessibiliteUFR(?string $accessibilite_UFR): self
-    {
-        $this->accessibilite_UFR = $accessibilite_UFR;
+        $this->ufr = $ufr;
 
         return $this;
     }
@@ -154,6 +143,18 @@ class AccessBus
     public function setPictoTypeTransport(string $picto_type_transport): self
     {
         $this->picto_type_transport = $picto_type_transport;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?int
+    {
+        return $this->departement;
+    }
+
+    public function setDepartement(int $departement): self
+    {
+        $this->departement = $departement;
 
         return $this;
     }

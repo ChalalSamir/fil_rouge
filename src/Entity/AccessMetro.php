@@ -83,7 +83,7 @@ class AccessMetro
 
     public function setNom(string $nom): self
     {
-        $this->nom_arret = $nom;
+        $this->nom = $nom;
 
         return $this;
     }
