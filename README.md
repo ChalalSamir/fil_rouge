@@ -48,5 +48,5 @@ La majorité des données de notre base proviennent des bases de données fourni
         ALTER TABLE access_bus DROP coordonnees;
         
         
-
+Les
  
