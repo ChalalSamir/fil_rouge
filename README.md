@@ -1,10 +1,10 @@
 # Projet fil rouge : Parti back-end du projet
 
-Projet de deuxième année de bachelor web au sein de l'école d'hétude superieur HETIC
+Projet de deuxième année de bachelor web au sein de l'école d'étude supérieur HETIC
 
 # CONSIGNE
 
-Rendre une Datalyse qui permettrais de rendre la vile de Paris plus "Smart city" a l'occasion des JO 2024
+Rendre une Datalyse qui permettrait de rendre la ville de Paris plus "Smart city" à l'occasion des JO 2024
 
 # SUJET
 
