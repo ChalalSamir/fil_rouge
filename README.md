@@ -55,5 +55,10 @@ La majorité des données de notre base proviennent des bases de données fourni
 
 Mon MCD original ne comportait pas de relation entre les entités, j'ai remarqué que cela posait problème par rapport à la normalisation des données, par faute de temps je n'ai pas eu le temps de réorganiser la structure de ma BDD. J'ai donc proposé un MCD amélioré pour une V2 du projet, je pourrais donc expliquer la relation ManyToMany que comporte le MCD amélioré : 
 
-# Relation ManyToMany entre les stations et les types de transport 
+# Relation ManyToMany entre les stations et les types de transport : 
+
+Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans la première toutes les stations (RER, Metro, Bus) sont repértorié et dans la seconde nous avons les types de transport (càd Bus,Métro,RER). La relation est la suivante : une station peut avoir plusieurs types de transport (exemple la station "Nation" a comme type de transport Métro,RER et Bus) et un type de transport a logiquement plusieurs stations. 
+
+# Comment cela est enregistré en base de données ?
+
  
