@@ -1,4 +1,4 @@
-# fil_rouge
+# Projet fil rouge
 
 Parti back-end du projet fil_rouge
 
@@ -20,12 +20,12 @@ Dévelopeur back-end: Samir
 
 Développeur front-end: Lucien
 
-Modèle Conceptuel des Données :
+# Modèle Conceptuel des Données :
 
 ![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/MCD.png)
 
 
-Texte explicatif :
+# Texte explicatif :
 
 La majorité des données de notre base proviennent des bases de données fournient par la RATP, à part pour les entités "lieux_epreuves" et "travaux_en_cours". Les données fournient par la RATP étaient au départ difficile à manipuler en raison de nombreux facteurs : 
 
@@ -48,5 +48,12 @@ La majorité des données de notre base proviennent des bases de données fourni
         ALTER TABLE access_bus DROP coordonnees;
         
         
-Les
+# Modèle Conceptuel des Données V2 :
+
+![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/MCDV2.png)
+
+
+Mon MCD original ne comportait pas de relation entre les entités, j'ai remarqué que cela posait problème par rapport à la normalisation des données, par faute de temps je n'ai pas eu le temps de réorganiser la structure de ma BDD. J'ai donc proposé un MCD amélioré pour une V2 du projet, je pourrais donc expliquer la relation ManyToMany que comporte le MCD amélioré : 
+
+# Relation ManyToMany entre les stations et les types de transport 
  
