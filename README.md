@@ -1,18 +1,16 @@
-# Projet fil rouge
-
-Parti back-end du projet fil_rouge
+# Projet fil rouge : Parti back-end du projet
 
 Projet de deuxième année de bachelor web au sein de l'école d'hétude superieur HETIC
 
-CONSIGNE
+# CONSIGNE
 
 Rendre une Datalyse qui permettrais de rendre la vile de Paris plus "Smart city" a l'occasion des JO 2024
 
-SUJET
+# SUJET
 
 Donner accès aux personnes en situation d'handicape aux différentes épreuves de l'événement
 
-ROLES
+# ROLES
 
 Designer: Cassandra, Lucas, Mohamed
 
@@ -64,4 +62,4 @@ Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans
  
 # Symfony & API :
 
-        # API
+       
