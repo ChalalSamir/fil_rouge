@@ -59,6 +59,8 @@ Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans
 
 # Comment cela est enregistré en base de données ?
 
+Une table de jointure nommée station_type_transport est créée, l'id de la station et du type de transport en clé étrangère. "
+
  
 # Symfony & API :
 
