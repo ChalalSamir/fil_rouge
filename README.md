@@ -25,7 +25,7 @@ Développeur front-end: Lucien
 
 # Texte explicatif :
 
-La majorité des données de notre base proviennent des bases de données fournient par la RATP, à part pour les entités "lieux_epreuves" et "travaux_en_cours". Les données fournient par la RATP étaient au départ difficile à manipuler en raison de nombreux facteurs : 
+La majorité des données de notre base proviennent de la RATP, à part pour les entités "lieux_epreuves" et "travaux_en_cours". Les données fournient par la RATP étaient au départ difficile à manipuler en raison de nombreux facteurs : 
 
 - Il y avait de nombreux champs qui ne nous étaient pas utiles pour ce que nous voulions faire
 
