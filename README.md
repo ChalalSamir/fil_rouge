@@ -55,13 +55,8 @@ Mon MCD original ne comportait pas de relation entre les entités, j'ai remarqu�
 
 # Relation ManyToMany entre les stations et les types de transport : 
 
-Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans la première toutes les stations (RER, Metro, Bus) sont repértorié et dans la seconde nous avons les types de transport (càd Bus,Métro,RER). La relation est la suivante : une station peut avoir plusieurs types de transport (exemple la station "Nation" a comme type de transport Métro,RER et Bus) et un type de transport a logiquement plusieurs stations. 
+Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans la première toutes les stations (RER, Metro, Bus) sont repértorié et dans la seconde nous avons les types de transport (càd Bus,Métro,RER). La relation est la suivante : une station peut avoir plusieurs types de transport (exemple la station "Nation" a comme type de transport Métro,RER et Bus) et un type de transport a logiquement plusieurs stations. Une table de jointure nommée station_type_transport est créée, l'id de la station et du type de transport en clé étrangère. 
 
-# Comment cela est enregistré en base de données ?
-
-Une table de jointure nommée station_type_transport est créée, l'id de la station et du type de transport en clé étrangère. "
-
- 
 # Symfony & API :
 
 J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API Plateform m'a permis d'avoir un gain de temps considérable pour les fonctionnalités que je souhaitais utiliser. J'ai choisis cet outils pour plusieurs raisons :
@@ -71,3 +66,9 @@ J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API 
 - La documentation Swagger automatique : Api Plateform génère automatiquement la documentation liée à notre Api, ce qui est vraiment pratique.
 
 - La gestion des filtres qui est vraiement simple à prendre en main. Il suffit comme pour l'argument "@ApiResourse", d'ajouter "@ApiFilter()" dans l'entité souhaitée, puis ensuite d'ajouter les champs que l'on souhaite filtré.
+
+# Documentation :
+
+Api Platform génère une documentation automatiquement :
+
+
