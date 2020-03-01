@@ -71,4 +71,6 @@ J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API 
 
 Api Platform génère une documentation automatiquement :
 
+![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/doc1.png)
+![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/doc2.png)
 
