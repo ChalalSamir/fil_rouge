@@ -69,8 +69,15 @@ J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API 
 
 # Documentation :
 
+La documentation de l'api se trouve a l'url suivante : http://samirchalal.fr/api/
+
 Api Platform génère une documentation automatiquement :
 
-![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/doc1.png)
 ![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/doc2.png)
+![alt text](https://raw.githubusercontent.com/ChalalSamir/fil_rouge/master/doc1.png)
+
+Dans la première partie il y a toute les entités, l'api n'est composé que de requête "GET" car le front n'avait besoin que de récuperer les informations et n'avait pas besoin de les modifier ou les supprimé. Il y a deux champs "GET", le premier permet de récuperer toutes les données ( ou les filtrer si un filtre a été initialisé pour cette entité ). Le deuxième permet de récuperer une donnée en fonction de son ID. Chaque requête GET affiche l'affiche qu'il faut entré pour accéder au fichier JSON.
+
+La deuxième partie montre les différentes informations que contiennent les entités et le template JSON qui va être généré lorsque le front ira cherché les informations ( par exemple a l'url suivante : http://samirchalal.fr/api/lieux_epreuves.json ) 
+
 
