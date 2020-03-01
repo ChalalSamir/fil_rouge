@@ -1,18 +1,16 @@
-# Projet fil rouge
+# Projet fil rouge : Parti back-end du projet
 
-Parti back-end du projet fil_rouge
+Projet de deuxième année de bachelor web au sein de l'école d'étude supérieur HETIC
 
-Projet de deuxième année de bachelor web au sein de l'école d'hétude superieur HETIC
+# Consigne
 
-CONSIGNE
+Rendre une Datalyse qui permettrait de rendre la ville de Paris plus "Smart city" à l'occasion des JO 2024
 
-Rendre une Datalyse qui permettrais de rendre la vile de Paris plus "Smart city" a l'occasion des JO 2024
-
-SUJET
+# Sujet
 
 Donner accès aux personnes en situation d'handicape aux différentes épreuves de l'événement
 
-ROLES
+# Rôles
 
 Designer: Cassandra, Lucas, Mohamed
 
@@ -27,7 +25,7 @@ Développeur front-end: Lucien
 
 # Texte explicatif :
 
-La majorité des données de notre base proviennent des bases de données fournient par la RATP, à part pour les entités "lieux_epreuves" et "travaux_en_cours". Les données fournient par la RATP étaient au départ difficile à manipuler en raison de nombreux facteurs : 
+La majorité des données de notre base proviennent de la RATP, à part pour les entités "lieux_epreuves" et "travaux_en_cours". Les données fournient par la RATP étaient au départ difficile à manipuler en raison de nombreux facteurs : 
 
 - Il y avait de nombreux champs qui ne nous étaient pas utiles pour ce que nous voulions faire
 
@@ -55,5 +53,22 @@ La majorité des données de notre base proviennent des bases de données fourni
 
 Mon MCD original ne comportait pas de relation entre les entités, j'ai remarqué que cela posait problème par rapport à la normalisation des données, par faute de temps je n'ai pas eu le temps de réorganiser la structure de ma BDD. J'ai donc proposé un MCD amélioré pour une V2 du projet, je pourrais donc expliquer la relation ManyToMany que comporte le MCD amélioré : 
 
-# Relation ManyToMany entre les stations et les types de transport 
- 
+# Relation ManyToMany entre les stations et les types de transport : 
+
+Nous avons ici deux entités qui se nomment "station" et "type_transport" , dans la première toutes les stations (RER, Metro, Bus) sont repértorié et dans la seconde nous avons les types de transport (càd Bus,Métro,RER). La relation est la suivante : une station peut avoir plusieurs types de transport (exemple la station "Nation" a comme type de transport Métro,RER et Bus) et un type de transport a logiquement plusieurs stations. Une table de jointure nommée station_type_transport est créée, l'id de la station et du type de transport en clé étrangère. 
+
+# Symfony & API :
+
+J'ai choisis d'utiliser le framework API Platform pour ce projet. En effet, API Plateform m'a permis d'avoir un gain de temps considérable pour les fonctionnalités que je souhaitais utiliser. J'ai choisis cet outils pour plusieurs raisons :
+
+- La création automatique d'un CRUD pour toutes les entités que l'on va créer après avoir installé ce framework. Si les entités on été créer avant l'installation de l'API, il suffira juste de rajouter "@ApiResource" dans le fichier "src/Entity/Entity-name.php" et cela va directement ajouter un crud pour l'entité. 
+
+- La documentation Swagger automatique : Api Plateform génère automatiquement la documentation liée à notre Api, ce qui est vraiment pratique.
+
+- La gestion des filtres qui est vraiement simple à prendre en main. Il suffit comme pour l'argument "@ApiResourse", d'ajouter "@ApiFilter()" dans l'entité souhaitée, puis ensuite d'ajouter les champs que l'on souhaite filtré.
+
+# Documentation :
+
+Api Platform génère une documentation automatiquement :
+
+
